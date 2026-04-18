@@ -1,8 +1,13 @@
 misc/**
 output/**
+output_old/**
 data/cache/**
+data/cache_old/**
 data/raw/**
-*.exe
+playground/**
+**/*.exe
+**/*.csv
+**/*.tsv
 
 !**/.gitkeep
 
