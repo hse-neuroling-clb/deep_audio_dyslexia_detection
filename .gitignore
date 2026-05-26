@@ -5,9 +5,15 @@ data/cache/**
 data/cache_old/**
 data/raw/**
 playground/**
+old/
+server/**
 **/*.exe
 **/*.csv
 **/*.tsv
+**/*.xls
+**/*.xlsx
+
+new_output/
 
 !**/.gitkeep
 
