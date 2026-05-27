@@ -18,8 +18,8 @@ TRICK_GRADE_THRESHOLDS = {
     4: [71, 84]
 }
 
-# lobster
-LOBSTER_GRADE_THRESHOLDS = {
+# crayfish
+CRAYFISH_GRADE_THRESHOLDS = {
     1: [23, 30],
     2: [45, 54],
     3: [67, 75],
@@ -30,7 +30,7 @@ LOBSTER_GRADE_THRESHOLDS = {
 GRADE_THRESHOLDS = {
     "zoo": ZOO_GRADE_THRESHOLDS,
     "trick": TRICK_GRADE_THRESHOLDS,
-    "lobster": LOBSTER_GRADE_THRESHOLDS
+    "crayfish": CRAYFISH_GRADE_THRESHOLDS
 }
 
 # todo: make it work inversely for lower is better

@@ -64,7 +64,7 @@ class RunnerSaver:
             pprint(merged_param_distributions_norm, stream=f)
 
     @staticmethod
-    def save_evaluation_results(experiment: Experiment, y_labels: list, y_names: list[str], evaluation_metrics: dict, importances: pd.Series, confusion_matrix: np.ndarray, precision_recall_fscore_support_value:tuple, report: dict, output_dir: Path):
+    def save_evaluation_results(experiment: Experiment, y_labels: list, y_names: list[str], evaluation_metrics: dict, importances: pd.Series | None, confusion_matrix: np.ndarray, precision_recall_fscore_support_value:tuple, report: dict, output_dir: Path):
         full_experiment_folder_path = RunnerSaver.ensure_folder(experiment, output_dir)
         evaluation_df = pd.DataFrame([evaluation_metrics])
         evaluation_df.to_csv(full_experiment_folder_path / Path(f"evaluation_results.csv"), index=False)
@@ -97,4 +97,5 @@ class RunnerSaver:
         plt.close(fig)
 
         pd.DataFrame(confusion_matrix).to_csv(full_experiment_folder_path / Path(f"confusion_matrix.csv"), index=False)
-        importances.to_csv(full_experiment_folder_path / Path(f"feature_importances.csv"), index=True)
+        if importances is not None:
+            importances.to_csv(full_experiment_folder_path / Path(f"feature_importances.csv"), index=True)

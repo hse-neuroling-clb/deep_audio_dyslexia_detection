@@ -15,7 +15,7 @@ from sklearn.base import clone
 from src.pipeline.normalize_grade import NormalizeGradeTransformer
 from src.pipeline.umap_embedding import UmapEmbeddingTransformer
 from src.experiment import Experiment
-from utils.read_datasets import read_datasets
+from src.utils.read_datasets import read_datasets
 from src.utils.runner_utils import extract_test, get_stratification_groups, get_xy
 from src.trainer import Trainer, evaluate
 
@@ -214,7 +214,8 @@ class Runner:
         print(f"Evaluation on test set, results:\n{evaluated_trainer_metrics}")
 
         x_cols = self._get_pipeline_columns(model, X_train.columns.tolist())
-        importances = self.experiment.model_info.importance_fn(model, x_cols, X_test, y_test, random_state=self.experiment.random_state, n_jobs=n_jobs)
-        print(f"Feature importances:\n{importances}")
+        # importances = self.experiment.model_info.importance_fn(model, x_cols, X_test, y_test, random_state=self.experiment.random_state, n_jobs=n_jobs)
+        importances = None
+        # print(f"Feature importances:\n{importances}")
         return evaluated_trainer_metrics, importances, confusion_matrix, precision_recall_fscore_support_value, report
 

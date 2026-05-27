@@ -23,7 +23,7 @@ class SmoothingClipUpperBoundType(Enum):
 class Experiment:
     model_info: ModelInfo
     dataset_names: tuple[str, ...] = ("zoo", "trick")  # datasets for training
-    test_dataset_names: tuple[str, ...] | None = ("lobster",) 
+    test_dataset_names: tuple[str, ...] | None = ("crayfish",) 
     target_column: Literal["label1", "speed"] = "label1"  # what to predict
     threshold_splits: Literal[2, 3] = 3  # 2 or 3 - number of classes to split dataset to (essentially, should we combine 1 and 2 classes or not)
     normalize_grade: bool = True  # make grades from 1,2,3,4 to 0.25,0.5,0.75,1.0

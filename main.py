@@ -42,8 +42,8 @@ def get_dataset_combinations(train_items, test_items):
 
 models = regressors
 train_and_test_dataset_names = get_dataset_combinations(
-    train_items=['zoo', 'trick', 'lobster'],
-    test_items=['zoo', 'trick', 'lobster']
+    train_items=['zoo', 'trick', 'crayfish'],
+    test_items=['zoo', 'trick', 'crayfish']
 )
 
 

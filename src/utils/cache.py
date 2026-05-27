@@ -29,5 +29,8 @@ class Cache:
 
     def __setitem__(self, key, value):
         self.cache[key] = value
+        self._save()
+    
+    def _save(self):
         with open(self._cache_path, "wb") as f:
             pickle.dump(self.cache, f, protocol=pickle.HIGHEST_PROTOCOL)
