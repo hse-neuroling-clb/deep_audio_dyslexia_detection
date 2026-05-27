@@ -1,10 +1,10 @@
 # Deep Audio Dyslexia Detection
 
-Dataset can be found [here](data/raw/scores).
+Dataset can be found in the folder [data/raw/scores](data/raw/scores).
 
 Columns description:
 * ID: participant ID
-* grade: school grade (1-4)
+* grade: participant school grade (1-4)
 * age: participant age
 * gender: participant gender (0 - female, 1 - male)
 * raven: Raven's progressive matrices score
@@ -17,5 +17,5 @@ Columns description:
 
 
 External dependencies:
-ffmpeg
-python 3.12.11
+- ffmpeg
+- python 3.12.11
